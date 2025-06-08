@@ -1,0 +1,15 @@
+# dependencies
+*/node_modules
+
+# Compiled source
+# src/*.css
+# src/*.css.map
+
+# Development
+src/dev/*.css
+src/dev/*.css.map
+
+# images
+
+# misc
+*/package-lock.json
