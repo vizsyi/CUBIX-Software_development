@@ -1,0 +1,27 @@
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: "1rem";
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    input, button {
+      padding: 0.5rem;
+      font-size: '1rem';
+    }
+    #output {
+      margin-top: 1rem;
+      white-space: pre-wrap;
+    
+    }
+
+    .redshadow {
+      box-shadow: 2px 2px;
+      box-shadow: 2px 2px 4px hsla(0, 87%, 12%, 0.2);
+    }
+    .semmi {
+
+    }
+    
