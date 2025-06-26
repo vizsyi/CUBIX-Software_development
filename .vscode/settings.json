@@ -1,12 +1,3 @@
 {
-  "stylelint.validate": ["css", "postcss", "scss"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": "explicit"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  }
+  "stylelint.validate": ["css", "postcss", "scss"]
 }

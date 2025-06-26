@@ -7,31 +7,62 @@ import markdown from "@eslint/markdown";
 import css from "@eslint/css";
 import { defineConfig } from "eslint/config";
 
-
 export default defineConfig([
-  // Node_modules mappa, build kizárása
-  {
-    ignores: ["node_modules", "src/script.js"],
-  },
-  { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    plugins: { js },
-    extends: ["js/recommended"],
-    //Szabályok beállítása
-    rules: {
-      "prefer-const": "warn",
-      "no-unused-vars": ["warn", {"argsIgnorePattern": "req|res|next|val"}],
-      "eqeqeq": ["warn", "always"],
-      "quotes": ["error", "double"],
-      "no-console": "warn"
-      //"prettier/prettier": "warn"
+    // Node_modules mappa, build kizárása
+    {
+        ignores: ["node_modules", "src/script.js"],
     },
-   },
-  { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"], languageOptions: { globals: globals.browser } },
-  tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  { files: ["**/*.json"], plugins: { json }, language: "json/json", extends: ["json/recommended"] },
-  { files: ["**/*.jsonc"], plugins: { json }, language: "json/jsonc", extends: ["json/recommended"] },
-  { files: ["**/*.json5"], plugins: { json }, language: "json/json5", extends: ["json/recommended"] },
-  { files: ["**/*.md"], plugins: { markdown }, language: "markdown/gfm", extends: ["markdown/recommended"] },
-  { files: ["**/*.css"], plugins: { css }, language: "css/css", extends: ["css/recommended"] },
+    {
+        files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+        plugins: { js },
+        extends: ["js/recommended"],
+        //Szabályok beállítása
+        rules: {
+            "prefer-const": "warn",
+            "no-unused-vars": [
+                "warn",
+                { argsIgnorePattern: "req|res|next|val" },
+            ],
+            eqeqeq: ["warn", "always"],
+            quotes: ["error", "double"],
+            "no-console": "warn",
+            //"prettier/prettier": "warn"
+        },
+    },
+    {
+        files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+        languageOptions: { globals: globals.browser },
+    },
+    tseslint.configs.recommended,
+    pluginReact.configs.flat.recommended,
+    {
+        files: ["**/*.json"],
+        plugins: { json },
+        language: "json/json",
+        extends: ["json/recommended"],
+    },
+    {
+        files: ["**/*.jsonc"],
+        plugins: { json },
+        language: "json/jsonc",
+        extends: ["json/recommended"],
+    },
+    {
+        files: ["**/*.json5"],
+        plugins: { json },
+        language: "json/json5",
+        extends: ["json/recommended"],
+    },
+    {
+        files: ["**/*.md"],
+        plugins: { markdown },
+        language: "markdown/gfm",
+        extends: ["markdown/recommended"],
+    },
+    {
+        files: ["**/*.css"],
+        plugins: { css },
+        language: "css/css",
+        extends: ["css/recommended"],
+    },
 ]);
